@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %} Predecir {% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="/home">
+        <p style="font-style: italic">
+            <h3>Predicción de abandono de la compañía</h1>
+        </p>
+    </form>
+</div>
+<div>
+    {% from "macro.html" import render_messages%}
+    {{ render_messages (form) }}
+</div>
+
+<div class="container">
+    <form method="POST" action="">
+        <p>
+            {{wtf.quick_form(form)}}
+        </p>
+    </form>
+</div>
+
+{% endblock content %}

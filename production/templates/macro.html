@@ -1,0 +1,47 @@
+{% macro render_formas(form) %}
+
+{% for field in form if field.widget.input_type != 'hidden'%}
+<div>
+    <p>
+        {% if field.id != 'submit' %}
+        {{field.label}}
+        {% endif %}
+        {{field}}
+    </p>
+    {% endfor %}
+</div>
+<div>
+    <ul class="alert alert-danger">
+        {% if form.errors %}
+        <ul class="alert alert-danger">
+            {% for field, errors in form.errors.items() %}
+            <li style="font-style: italic"> {{ field }}: {% for error in errors %}{{ error }}{% endfor %}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </ul>
+
+</div>
+
+{% endmacro %}
+
+{% macro render_messages(form) %}
+<div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'message' %}
+    <div class="alert alert-warning" role="alert">
+        {% else %}
+        <div class="alert alert-{{ category }}" role="alert">
+            {% endif %}
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+
+    {% endmacro %}
+
