@@ -30,7 +30,6 @@ def home():
     form.EnvironmentSatisfaction.choices=lst_1_4
     form.JobSatisfaction.choices=lst_1_4
     if request.method=='POST':
-
         if form.validate_on_submit():
             age=form.Age.data
             eduField=form.EducationField.data
@@ -60,14 +59,11 @@ def home():
             datos['YearsWithCurrManager']=int(yearsCurrent)
             datos['EnvironmentSatisfaction']=int(enviromentSatisfaction)
             datos['JobSatisfaction']=int(jobSatisfaction)
-
             res=predict_attrition(datos)
             flash(res)
-
         else:
             flash('Please review the data entered','danger')
-
     return render_template("home.html",form=form)
 
-if __name__=="__main__":
+if __name__ == "__main__":
     app.run(debug=True,port=8000,host="0.0.0.0")
