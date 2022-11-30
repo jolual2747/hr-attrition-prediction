@@ -1,0 +1,14 @@
+kaggle
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+ipykernel
+pyzmq
+jinja2
+imblearn
+flask
+flask-bootstrap
+flask-wtf
+wtforms
