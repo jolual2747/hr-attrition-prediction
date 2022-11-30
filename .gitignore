@@ -13,6 +13,7 @@
 *.joblib
 # Kaggle
 kaggle.json
+.kaggle
 
 # IPython
 profile_default/
