@@ -1,5 +1,4 @@
 # hr-attrition-prediction
-
 Aplicación de algoritmos de machine learning en problemas de clasificación
 
 Una gran empresa llamada XYZ emplea, tiene en un momento dado, alrededor de 4000 empleados. Sin embargo, cada año, alrededor del 15% de sus empleados abandonan la empresa y necesitan ser reemplazados por la reserva de talento disponible en el mercado laboral. La gerencia cree que este nivel de deserción (empleados que se van, ya sea por su propia cuenta o porque fueron despedidos) es malo para la empresa.
