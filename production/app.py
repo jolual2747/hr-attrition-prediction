@@ -4,12 +4,10 @@ import os
 from flask_bootstrap import Bootstrap
 from predicter import predict_attrition
 
-
 secretkey=os.urandom(32)
 app=Flask(__name__,instance_relative_config=False)
 app.secret_key=secretkey
 Bootstrap(app)
-
 
 #Listas para poblar campos de selección
 education=['Human Resources', 'Life Sciences', 'Marketing', 'Medical', 'Other',
