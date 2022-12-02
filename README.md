@@ -24,5 +24,4 @@ git clone <ssh_code>
 pip3 install -r requirements.txt -U
 sudo apt-get install unzip
 python3 kaggle_download.py
-
 ```
